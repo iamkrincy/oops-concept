@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Details</title>
+    <style>
+        body {
+            font-family: cursive;
+            background-color: #f0f0f0cb;
+            color: white;
+        }
+        .person-details {
+            background-color: #061d38;
+            padding: 20px;
+            margin: 20px;
+            width: 25%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .person-details h2 {
+            margin-top: 0;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        class Person{
+            constructor(name, age, country){
+                this.name = name;
+                this.age = age;
+                this.country = country;
+            }
+            displayDetails(){
+                let details = `
+                    <div class="person-details">
+                        <h2>Person Details :-</h2>
+                        <p>Name: ${this.name}</p>
+                        <p>Age: ${this.age}</p>
+                        <p>Country: ${this.country}</p>
+                    </div>
+                `;
+                document.write(details);
+            }
+        }
+
+        let person1 = new Person("Kikiee", 18, "USA");
+        let person2 = new Person("Shree", 20, "IND");
+
+
+        person1.displayDetails();
+        person2.displayDetails();
+    </script>
+</body>
+</html>
